@@ -1,23 +1,37 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import { Section, useScrollSection } from "react-scroll-section"
 
 const Home = () => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-      }}
-      id="home"
-    >
-      <div>
-        <h1 className="main-title">Jennifer Chow</h1>
-        <h2 className="main-subtitle">Web Developer</h2>
+  const portfolioSection = useScrollSection("portfolio")
 
-        {/* <div style={{ fontSize: "60px", textAlign: "center" }}>&#8744;</div> */}
+  return (
+    <Section id="home">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "98vh",
+        }}
+      >
+        <div>
+          <h1 className="main-title">Jennifer Chow</h1>
+          <h2 className="main-subtitle">Web Developer</h2>
+
+          <div style={{ textAlign: "center", paddingTop: "2rem" }}>
+            <FontAwesomeIcon
+              className="scroll-down"
+              icon={faChevronDown}
+              size="2x"
+              onClick={portfolioSection.onClick}
+              selected={portfolioSection.selected}
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </Section>
   )
 }
 

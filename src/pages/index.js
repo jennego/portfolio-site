@@ -10,17 +10,26 @@ import Home from "../components/sections/landing-page"
 import Portfolio from "../components/sections/portfolio"
 import About from "../components/sections/about"
 import Contact from "../components/sections/contact"
+import {
+  ScrollingProvider,
+  useScrollSection,
+  Section,
+} from "react-scroll-section"
 
-const IndexPage = () => (
-  <div>
-    <Layout>
-      <Seo title="Home" />
-      <Home />
-      <Portfolio />
-      <About />
-      <Contact />
-    </Layout>
-  </div>
-)
+const IndexPage = () => {
+  return (
+    <div>
+      <ScrollingProvider>
+        <Layout>
+          <Seo title="Home" />
+          <Home />
+          <Portfolio />
+          <About />
+          <Contact />
+        </Layout>
+      </ScrollingProvider>
+    </div>
+  )
+}
 
 export default IndexPage

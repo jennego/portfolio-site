@@ -1,17 +1,19 @@
 import React from "react"
+import { Section } from "react-scroll-section"
 
 const Contact = props => {
   return (
-    <div
-      style={{
-        height: "90vh",
-      }}
-      id="contact"
-    >
-      <h2>Contact</h2>
+    <Section id="contact">
+      <div
+        style={{
+          height: "90vh",
+        }}
+      >
+        <h2>Contact</h2>
 
-      <p>jen [at] jenniferchow.ca</p>
-    </div>
+        <p>jen [at] jenniferchow.ca</p>
+      </div>
+    </Section>
   )
 }
 

@@ -35,8 +35,20 @@ a:visited {
   color: rgb(154, 178, 251);
 }
 
-a:hover {
+a:hover,
+.nav-menu li:hover,
+.scroll-down:hover {
   color: rgb(110, 174, 255);
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu li {
+  list-style-type: none;
+  padding-right: 1rem;
+  cursor: pointer;
 }
 
 h1.main-title {
@@ -97,4 +109,12 @@ h2.main-subtitle {
 .project-info {
   padding-right: 29px;
   cursor: pointer;
+}
+
+.skill-list u {
+  margin-bottom: 0;
+}
+
+.skill-list ul {
+  margin-top: 0;
 }
